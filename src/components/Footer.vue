@@ -1,0 +1,107 @@
+<script setup></script>
+
+<template>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__text">
+                <h2 class="footer__text--small">Crafting</h2>
+                <h2 class="footer__text--big">Since 2020</h2>
+            </div>
+            <div class="footer__contact">
+                <a
+                    href="mailto:profile.mdjafarkhan@gmail.com"
+                    class="footer__contact-link"
+                >
+                    profile.mdjafarkhan@gmail.com
+                </a>
+            </div>
+            <ul class="footer__socials">
+                <li class="footer__socials-item">
+                    <a href="" class="footer__socials-item-link"> Linkdin </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="" class="footer__socials-item-link"> Behnace </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="" class="footer__socials-item-link"> Fiverr </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</template>
+
+<style lang="scss" scoped>
+@use "../styles/utils" as responsive;
+.footer {
+    display: flex;
+    align-items: flex-end;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    @mixin round-style {
+        border: 1px solid var(--color-bg-dark);
+        padding: 0.3em 1em;
+        border-radius: 50px;
+    }
+    background-color: var(--color-bg-white);
+    color: var(--color-text-dark);
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-md);
+
+    &__container {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-sm);
+    }
+    .footer__text {
+        text-align: center;
+        &--small {
+            font-size: clamp(1.75rem, 1rem + 3vw, 4rem);
+        }
+        &--big {
+            font-size: clamp(2.25rem, 1rem + 5vw, 6rem);
+        }
+    }
+
+    &__contact {
+        font-size: clamp(1rem, 0.89rem + 0.465vw, 1.25rem);
+        @include round-style();
+    }
+
+    &__socials {
+        font-size: clamp(1rem, 0.89rem + 0.465vw, 1.25rem);
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5em;
+        width: 100%;
+        max-width: max(60%, 400px);
+        &-item {
+            @include round-style();
+        }
+    }
+}
+
+@include responsive.respond-to("laptop") {
+    .footer {
+        &__container {
+            flex-flow: row;
+            max-width: 1600px;
+            justify-content: space-between;
+            gap: 1em;
+        }
+
+        &__socials {
+            max-width: fit-content;
+            justify-content: center;
+            order: 3;
+        }
+        &__text {
+            order: 2;
+        }
+    }
+}
+</style>
