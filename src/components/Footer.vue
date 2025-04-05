@@ -60,10 +60,10 @@
     .footer__text {
         text-align: center;
         &--small {
-            font-size: clamp(1.75rem, 1rem + 3vw, 4rem);
+            font-size: clamp(2.25rem, 1.417rem + 3.333vw, 4rem);
         }
         &--big {
-            font-size: clamp(2.25rem, 1rem + 5vw, 6rem);
+            font-size: clamp(2.5rem, 0.833rem + 6.667vw, 6rem);
         }
     }
 
