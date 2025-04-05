@@ -66,7 +66,10 @@
 
     &__action {
         .btn {
+            font-size: clamp(0.875rem, 0.709rem + 0.698vw, 1.25rem);
             color: var(--color-text-white);
+            padding: clamp(0.625rem, 0.327rem + 1.19vw, 1.25rem)
+                clamp(1.25rem, 0.952rem + 1.19vw, 1.875rem);
         }
     }
     &__menu {
