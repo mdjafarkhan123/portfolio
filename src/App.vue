@@ -6,12 +6,8 @@ import Header from "./components/Header.vue";
 
 const initLenis = () => {
     const lenis = new Lenis({
-        duration: 1.2, // Smooth scroll duration
-        easing: (t) => Math.min(1, 1.001 - Math.pow(1 - t, 4)), // Smooth easing
-        smooth: true, // Enable smooth scrolling
+        duration: 1.2,
     });
-
-    // Animation loop
     function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
@@ -19,7 +15,6 @@ const initLenis = () => {
 
     requestAnimationFrame(raf);
 
-    // Cleanup on unmount
     onUnmounted(() => {
         lenis.destroy();
     });
