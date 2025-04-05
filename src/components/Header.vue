@@ -46,6 +46,7 @@
     z-index: 999;
     background-color: var(--color-bg-dark);
     &__container {
+        max-width: 1920px;
         display: flex;
         padding-block: 0.5em;
         padding-inline: 1em;

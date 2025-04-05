@@ -41,15 +41,18 @@
     left: 0;
     right: 0;
     z-index: 1;
+    background-color: var(--color-bg-white);
+    color: var(--color-text-dark);
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-md);
+    &__container {
+        max-width: 1920px;
+    }
     @mixin round-style {
         border: 1px solid var(--color-bg-dark);
         padding: 0.3em 1em;
         border-radius: 50px;
     }
-    background-color: var(--color-bg-white);
-    color: var(--color-text-dark);
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-md);
 
     &__container {
         flex-flow: column;
