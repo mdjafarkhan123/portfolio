@@ -64,6 +64,7 @@
         text-align: center;
         &--small {
             font-size: clamp(2.25rem, 1.417rem + 3.333vw, 4rem);
+            font-weight: 800;
         }
         &--big {
             font-size: clamp(2.5rem, 0.833rem + 6.667vw, 6rem);

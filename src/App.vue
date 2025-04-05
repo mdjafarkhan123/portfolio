@@ -1,6 +1,34 @@
 <script setup>
+import { onMounted, onUnmounted } from "vue";
+import Lenis from "lenis";
 import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
+
+const initLenis = () => {
+    const lenis = new Lenis({
+        duration: 1.2, // Smooth scroll duration
+        easing: (t) => Math.min(1, 1.001 - Math.pow(1 - t, 4)), // Smooth easing
+        smooth: true, // Enable smooth scrolling
+        lerp: 0.2,
+    });
+
+    // Animation loop
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Cleanup on unmount
+    onUnmounted(() => {
+        lenis.destroy();
+    });
+};
+
+onMounted(() => {
+    initLenis();
+});
 </script>
 
 <template>
