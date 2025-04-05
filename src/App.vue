@@ -9,7 +9,6 @@ const initLenis = () => {
         duration: 1.2, // Smooth scroll duration
         easing: (t) => Math.min(1, 1.001 - Math.pow(1 - t, 4)), // Smooth easing
         smooth: true, // Enable smooth scrolling
-        lerp: 0.2,
     });
 
     // Animation loop
