@@ -1,59 +1,61 @@
 <script setup></script>
 
 <template>
-    <section id="contact" class="contact">
-        <div class="contact__container container">
-            <div class="contact__texts">
-                <h1 id="contact__title" class="contact__title">
-                    LET'S WORK TOGETHER
-                </h1>
-                <p class="contact__subtitle subtitle">
-                    Have a project in mind? Feel free to reach out to me
-                </p>
-            </div>
-            <form action="" autocomplete class="contact__form">
-                <div class="input-group">
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Your name"
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Your email"
-                        required
-                    />
+    <main>
+        <section id="contact" class="contact">
+            <div class="contact__container container">
+                <div class="contact__texts">
+                    <h1 id="contact__title" class="contact__title">
+                        LET'S WORK TOGETHER
+                    </h1>
+                    <p class="contact__subtitle subtitle">
+                        Have a project in mind? Feel free to reach out to me
+                    </p>
                 </div>
+                <form action="" autocomplete class="contact__form">
+                    <div class="input-group">
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Your name"
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Your email"
+                            required
+                        />
+                    </div>
 
-                <div class="input-group">
-                    <input
-                        type="tel"
-                        name="phone"
-                        id="phone"
-                        placeholder="Your phone(optional)"
-                    />
-                    <input
-                        type="text"
-                        name="service"
-                        id="service"
-                        placeholder="Type of service (development, design)"
+                    <div class="input-group">
+                        <input
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="Your phone(optional)"
+                        />
+                        <input
+                            type="text"
+                            name="service"
+                            id="service"
+                            placeholder="Type of service (development, design)"
+                            required
+                        />
+                    </div>
+                    <textarea
+                        name="description"
+                        id="description"
+                        placeholder="Tell me about your project"
                         required
-                    />
-                </div>
-                <textarea
-                    name="description"
-                    id="description"
-                    placeholder="Tell me about your project"
-                    required
-                ></textarea>
-                <button type="submit" class="btn">Send message</button>
-            </form>
-        </div>
-    </section>
+                    ></textarea>
+                    <button type="submit" class="btn">Send message</button>
+                </form>
+            </div>
+        </section>
+    </main>
 </template>
 
 <style lang="scss" scoped>

@@ -73,24 +73,29 @@ const { title, category, image, link } = defineProps({
     background-color: var(--color-bg-white);
     overflow: hidden;
     border-radius: 40px;
+
     &__image {
         overflow: hidden;
         border-radius: 40px;
+
         img {
             aspect-ratio: 5 / 4;
             object-fit: cover;
         }
     }
+
     &__content {
         display: flex;
         justify-content: space-between;
         gap: 1em;
         align-items: center;
         padding: 1.6em;
+
         .work-card__title {
             font-family: "Poppins";
             font-weight: 600;
         }
+
         .work-card__meta {
             display: flex;
             font-size: 0.8rem;
@@ -98,6 +103,7 @@ const { title, category, image, link } = defineProps({
 
             .icon {
                 margin-inline: 0.8em;
+
                 svg {
                     color: var(--color-primary);
                     width: 8px;
@@ -111,9 +117,11 @@ const { title, category, image, link } = defineProps({
             flex-direction: column;
             gap: 0.4em;
         }
+
         .work-card__button {
             padding: 0.6em 0.4em;
             line-height: 1;
+
             svg {
                 vertical-align: middle;
                 width: 50px;
