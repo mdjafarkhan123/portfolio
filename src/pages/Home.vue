@@ -5,19 +5,19 @@ import Project from "@/components/Project.vue";
 import projects from "@/data/project";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, FreeMode } from "swiper/modules";
+import Logo1 from "@/assets/images/logos/aicases.png";
+import Logo2 from "@/assets/images/logos/chefmade.png";
+import Logo3 from "@/assets/images/logos/nemely.png";
+import Logo4 from "@/assets/images/logos/nuvo.png";
+import Logo5 from "@/assets/images/logos/truevast.png";
 import "swiper/css";
 
 const logos = [
-    { src: `../assets/images/logos/aicases.png` },
-    { src: `../assets/images/logos/nemely.png` },
-    { src: `../assets/images/logos/chefmade.png` },
-    { src: `../assets/images/logos/nuvo.png` },
-    { src: `../assets/images/logos/truevast.png` },
-    { src: `../assets/images/logos/aicases.png` },
-    { src: `../assets/images/logos/nemely.png` },
-    { src: `../assets/images/logos/chefmade.png` },
-    { src: `../assets/images/logos/nuvo.png` },
-    { src: `../assets/images/logos/truevast.png` },
+    { src: Logo1 },
+    { src: Logo2 },
+    { src: Logo3 },
+    { src: Logo4 },
+    { src: Logo5 },
 ];
 // Swiper modules
 const modules = [Autoplay, FreeMode];
@@ -75,7 +75,7 @@ const resolveImagePath = (path) => new URL(path, import.meta.url).href;
                                 :key="index"
                             >
                                 <img
-                                    :src="resolveImagePath(logo.src)"
+                                    :src="logo.src"
                                     alt="Logo"
                                     class="logo-img"
                                 />
