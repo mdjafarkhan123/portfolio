@@ -32,7 +32,6 @@ const works1 = projects.slice(0, 2);
 const works2 = projects.slice(2, 4);
 
 // Image path resolver
-const resolveImagePath = (path) => new URL(path, import.meta.url).href;
 </script>
 
 <template>
@@ -102,7 +101,7 @@ const resolveImagePath = (path) => new URL(path, import.meta.url).href;
                             v-for="item in works1"
                             :key="item.id"
                             :title="item.title"
-                            :image="resolveImagePath(item.image)"
+                            :image="item.image"
                             :category="item.tag"
                         ></Project>
                     </div>
@@ -111,7 +110,7 @@ const resolveImagePath = (path) => new URL(path, import.meta.url).href;
                             v-for="item in works2"
                             :key="item.id"
                             :title="item.title"
-                            :image="resolveImagePath(item.image)"
+                            :image="item.image"
                             :category="item.tag"
                         ></Project>
                         <div class="work__content__cta">
