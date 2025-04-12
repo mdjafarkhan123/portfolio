@@ -18,6 +18,11 @@ const logos = [
     { src: Logo3 },
     { src: Logo4 },
     { src: Logo5 },
+    { src: Logo1 },
+    { src: Logo2 },
+    { src: Logo3 },
+    { src: Logo4 },
+    { src: Logo5 },
 ];
 // Swiper modules
 const modules = [Autoplay, FreeMode];
