@@ -295,6 +295,7 @@ main {
 }
 
 .partners {
+    pointer-events: none;
     &__content {
         width: 100%;
         overflow: hidden;
